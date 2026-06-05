@@ -4,6 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Behavioral guidelines to reduce common LLM coding mistakes. These bias toward caution over speed — for trivial tasks, use judgment.
 
+## Security Rules (Mandatory)
+- NEVER hardcode credentials, API keys, passwords, or tokens.
+- All secrets must come from environment variables using `os.getenv("KEY")`.
+- Do NOT read, echo, output, or store contents of `.env` files.
+- Do NOT modify or append to `.env` or `.env.local` files.
+
 ## 1. Think Before Coding
 
 **Don't assume. Don't hide confusion. Surface tradeoffs.**
